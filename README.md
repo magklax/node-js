@@ -1,8 +1,9 @@
 ## cipher CLI tool
+This app encodes and decodes a text by [Caesar cipher](https://en.wikipedia.org/wiki/Caesar_cipher)**.
 
 # How to install:
 
--   download it from the repository;
+-   download this app from the repository;
 -   run the command line and go to the directoty of app
 -   run `npm i` (or `npm install`)
 
