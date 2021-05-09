@@ -1,12 +1,14 @@
 ## cipher CLI tool
 
-# To install this app you must:
+# How to install:
 
 -   download it from the repository;
 -   run the command line and go to the directoty of app
--   run npm i (or install)
+-   run `npm i` (or `npm install`)
 
-# CLI tool should accept 4 options (short alias and full name):
+# How to use:
+Enter the following code into the command line: `node my_caesar_cli [options]`.
+CLI tool should accept 4 options (short alias and full name):
 
     -s, --shift: a shift
     -i, --input: an input file
