@@ -1,7 +1,5 @@
 ## cipher CLI tool
 
-## How to install
-
 # To install this app you must:
 
 -   download it from the repository;
