@@ -6,14 +6,20 @@ const transformer = (input, output, shift, action) => {
 	const transform = new Transform();
 
 	transform._transform = function (chunk, encoding, callback) {
-		this.push(caesarCipher(chunk.toString(), shift, action));
+		const encoded = caesarCipher(chunk.toString(), shift, action);
+		output ? this.push(encoded + "\r\n") : this.push(encoded);
 		callback();
 	};
 
 	pipeline(
 		input ? fs.createReadStream(input).setEncoding("utf8") : process.stdin,
 		transform,
-		output ? fs.createWriteStream(output, { flags: "a" }) : process.stdout,
+		output
+			? fs.createWriteStream(output, {
+					flags: "a",
+					encoding: "utf8",
+			  })
+			: process.stdout,
 		(err) => {
 			if (err) {
 				process.stderr.write("Transformation is failed", err);

@@ -1,5 +1,6 @@
 ## cipher CLI tool
-This app encodes and decodes a text by [Caesar cipher](https://en.wikipedia.org/wiki/Caesar_cipher)**.
+
+This app encodes and decodes a text by [Caesar cipher](https://en.wikipedia.org/wiki/Caesar_cipher)\*\*.
 
 # How to install:
 
@@ -8,6 +9,7 @@ This app encodes and decodes a text by [Caesar cipher](https://en.wikipedia.org/
 -   run `npm i` (or `npm install`)
 
 # How to use:
+
 Enter the following code into the command line: `node my_caesar_cli [options]`.
 CLI tool should accept 4 options (short alias and full name):
 
@@ -107,7 +109,13 @@ $ node my_caesar_cli --action encode --shift NaN --input input.txt --output outp
 $ node my_caesar_cli --action encode --shift '77' --input input.txt --output output.txt
 ```
 
-9. The action is not "encode" or "decode"
+9. The shift is greater than 26 (alphabet length)
+
+```bash
+$ node my_caesar_cli --action encode --shift 26007 --input input.txt --output output.txt
+```
+
+10. The action is not "encode" or "decode"
 
 ```bash
 $ node my_caesar_cli --action gggg --shift 0 --input input.txt --output output.txt
